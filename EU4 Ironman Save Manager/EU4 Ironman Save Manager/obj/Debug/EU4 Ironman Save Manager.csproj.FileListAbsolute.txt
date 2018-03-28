@@ -1,0 +1,20 @@
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\MainWindow.g.cs
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\SaveWindow.g.cs
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4ISM.g.cs
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager_MarkupCompile.cache
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager_MarkupCompile.lref
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\UserSettings.g.cs
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\bin\Debug\EU4 Ironman Save Manager.exe
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\bin\Debug\EU4 Ironman Save Manager.pdb
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\MainWindow.baml
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\UserSettings.baml
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\SaveWindow.baml
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.g.resources
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4_Ironman_Save_Manager.Properties.Resources.resources
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.csproj.GenerateResource.cache
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.csproj.CoreCompileInputs.cache
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.exe
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.pdb
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\UserLoadWindow.g.cs
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\UserLoadWindow.baml
+D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Debug\EU4 Ironman Save Manager.csprojResolveAssemblyReference.cache
