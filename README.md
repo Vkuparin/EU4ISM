@@ -45,3 +45,7 @@ This save manager was made for the following random reasons:
 * If it doesn't work, try running it with admin privileges
 * This program is completely free and open source so you can modify and reuse it as much as you want
 * By using this program you agree that I am not accountable for anything that happens to your saves, game files, computer, cat, mother-in-law or any other real or imagined object or being. Things can go wrong, you have been warned.
+
+# Pictures
+* The GUI is featured on the right side of the picture. The windows are draggable.
+![Image of EU4ISM GUI](https://github.com/Vkuparin/EU4ISM/blob/master/eu4ism_gui.png)
