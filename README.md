@@ -14,6 +14,7 @@ This is the first release of Ironman Save Manager for Europa Universalis 4 (EU4I
 1. Extract all files from the zip to the same folder
 2. Run the .exe
 3. Might need to run it as administrator
+4. Run EU4 in **Windowed Full Screen** mode
 
 # Usage
 1. Start an Ironman game in EU4
