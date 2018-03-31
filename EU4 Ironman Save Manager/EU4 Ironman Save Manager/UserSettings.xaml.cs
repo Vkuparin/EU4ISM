@@ -56,10 +56,11 @@ namespace EU4_Ironman_Save_Manager
         //Update save folder with Enter
         private void UpdateSaveFolder()
         {
-            string savelocation = SaveFolderName.Text + @"\";
-            if (MainWindow.ReadSetting("savefolder") != savelocation)
+            string savelocation = MainWindow.ReadSetting("savefolder");
+            if(savelocation != SaveFolderName.Text)
             {
-                MainWindow.UpdateConfig("savefolder", savelocation);
+                savelocation = SaveFolderName.Text;
+                MainWindow.UpdateConfig("savefolder", savelocation + @"\");
             }
         }
 
