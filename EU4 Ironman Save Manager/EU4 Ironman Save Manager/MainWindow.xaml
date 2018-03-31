@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="EU4ISM" Height="187.29" Width="175.223"
         MouseDown="MainWindow_MouseDown"
+        MouseUp="MainWindow_MouseUp"
         WindowStyle="None"
         AllowsTransparency="False"
         Topmost="True"
-        Deactivated="Window_Deactivated"
-        Activated="Window_Activated"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStartupLocation ="Manual">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*"/>
@@ -20,8 +20,9 @@
         </Grid.ColumnDefinitions>
         <Canvas HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="175" Background="#FF243F7A" Grid.ColumnSpan="2">
             <Button x:Name="Load" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Cursor="Hand" Click="LoadButton_Click" Height="21" Canvas.Left="22" Canvas.Top="107" ToolTip="Replace the current save with another save that you select in a dialog. Use this after you have exited the game."/>
-            <Button Content="X" Canvas.Left="76" Canvas.Top="160" Width="19" Click="Button_Click"/>
-            <Label x:Name="MenuText" Content="EU4 Ironman Save Manager" Width="175" Background="#FF181819" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="MenuText" Content="EU4 Ironman Save Manager" Width="175" Background="#FF181819" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" VerticalContentAlignment="Center" MouseDoubleClick="MenuText_MouseDoubleClick"/>
+            <Button Content="X" Canvas.Left="155" Canvas.Top="4" Width="18" Click="Button_Click" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Background="#FF181819" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="18" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label x:Name="NotifyText" Content="" Width="131" Background="#FF181819" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" VerticalContentAlignment="Center" Canvas.Left="22" Canvas.Top="160" HorizontalContentAlignment="Center" Visibility="Hidden"/>
         </Canvas>
         <Button x:Name="SettingsButton" Content="Settings" HorizontalAlignment="Left" Margin="22,133,0,0" VerticalAlignment="Top" Width="131" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Cursor="Hand" Click="SettingsButton_Click" Height="21" Grid.ColumnSpan="2" ToolTip="Set your save's name and folder location here."/>
         <Button x:Name="ReplaceButton" Content="Quickload" HorizontalAlignment="Left" Margin="22,81,0,0" VerticalAlignment="Top" Width="131" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Cursor="Hand" RenderTransformOrigin="0.55,-1.6" Click="ReplaceButton_Click" Grid.ColumnSpan="2" ToolTip="Replace the current save with the quicksave you made. Use this after you have exited the game."/>

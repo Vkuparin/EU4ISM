@@ -29,6 +29,8 @@ namespace EU4_Ironman_Save_Manager
             InitializeComponent();
             SaveFolderName.Text = MainWindow.ReadSetting("savefolder");
             SaveName.Text = MainWindow.ReadSetting("savename");
+            CenterWindowOnScreen();
+            SaveName.Focus();
         }
 
         //Open folder selection dialog and put the result to text field
@@ -78,7 +80,16 @@ namespace EU4_Ironman_Save_Manager
             }
 
         }
-
+        //Center window
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
+        }
         //Make window draggable
         private void UserSettings_MouseDown(object sender, MouseButtonEventArgs e)
         {

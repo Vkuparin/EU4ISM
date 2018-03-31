@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EU4 Ironman Save Manager/.vs/EU4 Ironman Save Manager/v15/Server/sqlite3
+/EU4 Ironman Save Manager/.vs/EU4 Ironman Save Manager/v15/.suo

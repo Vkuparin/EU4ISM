@@ -18,3 +18,22 @@ D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Mana
 D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserLoadWindow.g.cs
 D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserLoadWindow.baml
 D:\Programs\VisualStudio\Projects\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.csprojResolveAssemblyReference.cache
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\bin\Release\EU4 Ironman Save Manager.exe
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\bin\Release\EU4 Ironman Save Manager.pdb
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\MainWindow.g.cs
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserLoadWindow.g.cs
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserSettings.g.cs
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\SaveWindow.g.cs
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4ISM.g.cs
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager_MarkupCompile.cache
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager_MarkupCompile.lref
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\MainWindow.baml
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserLoadWindow.baml
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\UserSettings.baml
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\SaveWindow.baml
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.g.resources
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4_Ironman_Save_Manager.Properties.Resources.resources
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.csproj.GenerateResource.cache
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.csproj.CoreCompileInputs.cache
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.exe
+D:\Programs\VisualStudio\Repos\EU4ISM\EU4 Ironman Save Manager\EU4 Ironman Save Manager\obj\Release\EU4 Ironman Save Manager.pdb

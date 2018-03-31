@@ -24,14 +24,28 @@ namespace EU4_Ironman_Save_Manager
 
     public partial class MainWindow : Window
     {
-        
+        //Whether main window is maximized
+        public bool maximized = true;
+
         public MainWindow()
         {
             InitializeComponent();
             CheckFirstTime();
+            this.Top = Convert.ToDouble(ReadSetting("top"));
+            this.Left = Convert.ToDouble(ReadSetting("left"));
+            //  DispatcherTimer setup
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
+            dispatcherTimer.Start();
         }
 
-        private static void CheckFirstTime()
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            NotifyText.Visibility = Visibility.Hidden;
+        }
+
+        private void CheckFirstTime()
         {
             string firsttime = ReadSetting("first_time");
             Console.WriteLine("this is console " + firsttime);
@@ -42,6 +56,9 @@ namespace EU4_Ironman_Save_Manager
                 UpdateConfig("savefolder", savelocation);
                 UpdateConfig("copysavefolder", savelocation);
                 UpdateConfig("first_time", "0");
+                CenterWindowOnScreen();
+                NotifyText.Content = "First time settings OK";
+                NotifyText.Visibility = Visibility.Visible;
             }
         }
 
@@ -52,7 +69,6 @@ namespace EU4_Ironman_Save_Manager
             {
                 var appSettings = ConfigurationManager.AppSettings;
                 string result = appSettings[key] ?? "Not Found";
-                Console.WriteLine(result);
                 return result;
             }
             catch (ConfigurationErrorsException)
@@ -89,6 +105,8 @@ namespace EU4_Ironman_Save_Manager
                 string sourceFile = System.IO.Path.Combine(target, savename);
                 string destFile = System.IO.Path.Combine(target, quicksavename);
                 File.Copy(sourceFile, destFile, true);
+                NotifyText.Content = "Quicksave succesful";
+                NotifyText.Visibility = Visibility.Visible;
             }
             else
             {
@@ -98,7 +116,7 @@ namespace EU4_Ironman_Save_Manager
         }
 
         //Replaces the current save with the quicksave file
-        private void Replace()
+        private void Quickload()
         {
             if (ReadSetting("savename") != "default" && ReadSetting("savefolder") != "default")
             {
@@ -108,6 +126,8 @@ namespace EU4_Ironman_Save_Manager
                 string sourceFile = System.IO.Path.Combine(target, quicksavename);
                 string destFile = System.IO.Path.Combine(target, savename);
                 File.Copy(sourceFile, destFile, true);
+                NotifyText.Content = "Quickload succesful";
+                NotifyText.Visibility = Visibility.Visible;
             }
             else
             {
@@ -156,7 +176,7 @@ namespace EU4_Ironman_Save_Manager
         //Calls Replace when the Quickload button is clicked and removes the useless _Backup file
         private void ReplaceButton_Click(object sender, RoutedEventArgs e)
         {
-            Replace();
+            Quickload();
             DeleteBackup();
         }
 
@@ -166,10 +186,30 @@ namespace EU4_Ironman_Save_Manager
             new UserSettings().Show();
         }
 
+        //Center window
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
+        }
+
         //Makes window draggable
         private void MainWindow_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+        
+        //Updates location of main window when user stops dragging it
+        private void MainWindow_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            string topp = this.Top.ToString();
+            string leftt = this.Top.ToString();
+            UpdateConfig("top", topp);
+            UpdateConfig("left", leftt);
         }
 
         //Calls the window for custom save file and deletes the useless backup save
@@ -186,24 +226,32 @@ namespace EU4_Ironman_Save_Manager
             }
         }
 
-        //Make this app be on top. Top I say! Except in non-windowed fullscreen...
-        private void Window_Deactivated(object sender, EventArgs e)
-        {
-            Window window = (Window)sender;
-            window.Topmost = true;
-            Activate();
-        }
-
-        //Still trying to make this stay on top
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            this.Topmost = true;
-        }
-
-        //Closes the program from the X button
+        //Closes the program from the X button and updates window position (just to be sure)
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            string topp = this.Top.ToString();
+            string leftt = this.Top.ToString();
+            UpdateConfig("top", topp);
+            UpdateConfig("left", leftt);
+            Application.Current.Shutdown();
+        }
+
+        //Minimize the app by double clicking the header, double click again to maximize
+        private void MenuText_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (maximized)
+            {
+                Application.Current.MainWindow.Height = 26;
+                Application.Current.MainWindow.Width = 175;
+                maximized = false;
+            }
+            else
+            {
+                Application.Current.MainWindow.Height = 187.29;
+                Application.Current.MainWindow.Width = 175.223;
+                maximized = true;
+            }
+            
         }
     }
 }

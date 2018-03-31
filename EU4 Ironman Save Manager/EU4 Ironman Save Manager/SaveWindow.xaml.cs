@@ -24,6 +24,8 @@ namespace EU4_Ironman_Save_Manager
         {
             InitializeComponent();
             EnterToSave.Content= "Press Enter to save";
+            SaveName.Focus();
+            CenterWindowOnScreen();
         }
 
         //Do the copying over of the custom named save file
@@ -58,6 +60,17 @@ namespace EU4_Ironman_Save_Manager
                         MessageBox.Show("No save found, check save name and location in settings");
                     }
                 }
+        }
+
+        //Center window
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
         }
 
         //Close window with Esc

@@ -29,6 +29,7 @@ namespace EU4_Ironman_Save_Manager
             InitializeComponent();
             SaveFolderName.Text = MainWindow.ReadSetting("copysavefolder");
             EnterToLoad.Content = "Press Enter to load save";
+            CenterWindowOnScreen();
         }
 
         //Path to the save file the user selects in the dialog
@@ -98,7 +99,16 @@ namespace EU4_Ironman_Save_Manager
             }
 
         }
-
+        //Center window
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
+        }
         //Make window draggable
         private void UserLoadWindow_MouseDown(object sender, MouseButtonEventArgs e)
         {
