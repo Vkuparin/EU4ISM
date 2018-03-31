@@ -27,9 +27,9 @@ namespace EU4_Ironman_Save_Manager
         public MainWindow()
         {
             InitializeComponent();
-            CheckFirstTime();
             this.Top = Convert.ToDouble(ReadSetting("top"));
             this.Left = Convert.ToDouble(ReadSetting("left"));
+            CheckFirstTime();
             //  DispatcherTimer setup
             System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
