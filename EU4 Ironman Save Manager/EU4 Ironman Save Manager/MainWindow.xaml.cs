@@ -24,9 +24,6 @@ namespace EU4_Ironman_Save_Manager
 
     public partial class MainWindow : Window
     {
-        //Whether main window is maximized
-        public bool maximized = true;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +35,19 @@ namespace EU4_Ironman_Save_Manager
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
             dispatcherTimer.Start();
+            //See if the window was minimized or maximized when it was closed
+            bool maximized = Convert.ToBoolean(ReadSetting("maximized"));
+            if (maximized)
+            {
+                
+                Application.Current.MainWindow.Height = 187.29;
+                Application.Current.MainWindow.Width = 175.223;
+            }
+            else
+            {
+                Application.Current.MainWindow.Height = 26;
+                Application.Current.MainWindow.Width = 175;
+            }
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -207,7 +217,7 @@ namespace EU4_Ironman_Save_Manager
         private void MainWindow_MouseUp(object sender, MouseButtonEventArgs e)
         {
             string topp = this.Top.ToString();
-            string leftt = this.Top.ToString();
+            string leftt = this.Left.ToString();
             UpdateConfig("top", topp);
             UpdateConfig("left", leftt);
         }
@@ -230,7 +240,7 @@ namespace EU4_Ironman_Save_Manager
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string topp = this.Top.ToString();
-            string leftt = this.Top.ToString();
+            string leftt = this.Left.ToString();
             UpdateConfig("top", topp);
             UpdateConfig("left", leftt);
             Application.Current.Shutdown();
@@ -239,17 +249,19 @@ namespace EU4_Ironman_Save_Manager
         //Minimize the app by double clicking the header, double click again to maximize
         private void MenuText_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            //See if we are currently maximized
+            bool maximized = Convert.ToBoolean(ReadSetting("maximized"));
             if (maximized)
             {
                 Application.Current.MainWindow.Height = 26;
                 Application.Current.MainWindow.Width = 175;
-                maximized = false;
+                UpdateConfig("maximized","false");
             }
             else
             {
                 Application.Current.MainWindow.Height = 187.29;
                 Application.Current.MainWindow.Width = 175.223;
-                maximized = true;
+                UpdateConfig("maximized", "true");
             }
             
         }
